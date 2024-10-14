@@ -1,0 +1,9 @@
+export default function About(){
+    return(
+        <section id="about" className=" h-screen container">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati odio sint quisquam suscipit ipsam ipsa, debitis exercitationem amet sed porro beatae quidem minus quasi recusandae doloremque, corporis blanditiis iste tempore. Aliquam corrupti assumenda voluptate! Nemo, earum quaerat? Perferendis in minus aliquam perspiciatis sapiente quasi, commodi labore architecto animi adipisci rem assumenda aliquid pariatur, sequi odio eligendi, autem et soluta vel. Dolore tempora odio voluptates eum ipsa quasi quidem officia alias ex accusamus illum voluptate ipsam non, repellendus voluptatum expedita velit dolorum corrupti? Ratione repellat reprehenderit dolor voluptates magnam dolores a, exercitationem odio nesciunt! Minima magnam non cupiditate atque explicabo ipsa, assumenda aperiam, harum laboriosam aliquam illo accusamus obcaecati veritatis sit eveniet labore maiores maxime ipsam dignissimos optio nemo eos? Inventore, tenetur maiores magni rem beatae perspiciatis odio nulla excepturi harum doloribus asperiores ipsa in nostrum architecto dolore aperiam, vitae dignissimos reiciendis culpa laborum iure nihil quasi nobis magnam. Quam maiores consectetur amet ut corporis, dolores obcaecati voluptatum itaque nostrum et provident quia sapiente quaerat quidem error vero in! Aspernatur vel libero, nulla porro voluptate blanditiis illo earum ipsa distinctio ullam voluptatem ipsum alias, incidunt explicabo ut rerum minus officia repellendus consequatur quis magni ipsam! Voluptatum dolor doloribus quae porro numquam!
+            </p>
+        </section>
+    )
+}
