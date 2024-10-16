@@ -26,7 +26,7 @@ const logos = [
 export default function Brands() {
     return (
         <Marquee 
-        autoFill className="bg-gradient-to-r from-[#2f7380] to-[#2b155e] !bg-opacity-25 !-rotate-3 mt-10 mb-32 w-full">
+        autoFill className="bg-gradient-to-r from-[#2f7380] to-[#2b155e] !bg-opacity-25 !-rotate-3 mt-10 mb-32">
             {logos.map((logo, index) => (
                 <div className="md:mx-12 mx-4 py-2" key={index}>
                     <img

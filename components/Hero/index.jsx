@@ -15,7 +15,7 @@ export default function Hero(){
             />
 
             <div className="w-full h-full flex flex-col items-start justify-center gap-12 lg:justify-evenly container lg:pl-12">
-                <h1 className="text-8xl md:text-9xl lg:text-[168px] font-azonix whitespace-pre-line leading-[1]">
+                <h1 className="text-6xl md:text-9xl lg:text-[168px] font-azonix whitespace-pre-line leading-[1]">
                     Slogan{'\n'}Yazisi
                 </h1>
                 <Magnetic>

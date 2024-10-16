@@ -20,11 +20,11 @@ export default function ServiceBox({ icon, title, description }){
             }}
         >
             
-            <Image src={icon} alt={title} width={isHover ? 50 : 64} height={isHover ? 50 : 64} className="mb-2.5 transition-all duration-500" />
+            <Image src={icon} alt={title} width={isHover ? 50 : 64} height={isHover ? 50 : 64} className="mb-2.5 transition-all duration-300" />
             
-            <h4 className="text-2xl transition-all">
+            <h3 className="text-2xl transition-all">
                 {title}
-            </h4>
+            </h3>
 
             <p className="text-base text-neutral-400 text-left transition-all lg:max-w-[250px]">
                 {description}
@@ -33,7 +33,7 @@ export default function ServiceBox({ icon, title, description }){
             <motion.button
             initial={{ y: 100 }}
             animate={ isHover ? { y: 0 } : {y: 100} }
-            transition={{ duration: .3 }}
+            transition={{ duration: .2 }}
             className="w-fit mt-2">
                 Teklif Al
             </motion.button>
