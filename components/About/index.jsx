@@ -64,7 +64,7 @@ export default function About(){
 
                         <div className="flex ">
                             {socials.map((social) => (
-                                <div className="flex items-center justify-center" id={social.name}>
+                                <div className="flex items-center justify-center" key={social.name}>
                                     {social.icon}
                                 </div>
                             ))}
