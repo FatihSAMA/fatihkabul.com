@@ -34,7 +34,7 @@ export default function ServiceBox({ icon, title, description }){
             initial={{ y: 100 }}
             animate={ isHover ? { y: 0 } : {y: 100} }
             transition={{ duration: .2 }}
-            className="w-fit mt-2">
+            className="w-fit mt-auto">
                 Teklif Al
             </motion.button>
 

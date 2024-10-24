@@ -6,6 +6,9 @@
     html {
         scroll-behavior: smooth;
     }
+    body {
+        overflow-x: hidden !important;
+    }
       
 }
 
@@ -17,5 +20,18 @@
     .subtitle {
         @apply font-azonix text-4xl md:text-5xl w-fit
     }
+    .about-box {
+        @apply bg-zinc-900/60 border-2 border-white/5 overflow-hidden h-80 min-w-[300px] rounded-lg hover:border-white/10 transition-all
+    }
 
+}
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+  }
 }

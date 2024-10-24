@@ -35,20 +35,24 @@ export default function Model({ path, speed }) {
     setT((prevT) => (prevT >= 1 ? 0 : prevT + delta * speed)); 
     
     if (fishRef.current && path) {
-      const position = path.getPointAt(t); 
-      const tangent = path.getTangentAt(t).normalize(); 
+      try{
+        const position = path.getPointAt(t); 
+        const tangent = path.getTangentAt(t).normalize(); 
+        fishRef.current.position.copy(position);
+        const targetPosition = position.clone().add(tangent); 
+        fishRef.current.lookAt(targetPosition);
+        fishRef.current.rotateY(-Math.PI/2); 
+      }catch{
+        
+      }
 
-      fishRef.current.position.copy(position);
       
-      const targetPosition = position.clone().add(tangent); 
       
-      fishRef.current.lookAt(targetPosition);
-      fishRef.current.rotateY(-Math.PI/2); 
     }
   });
 
   return (
-    <group ref={fishRef} rotation={[0, 0, 0]} position={[0, 0, 0]} scale={1}>
+    <group ref={fishRef} rotation={[0, 0, 0]} position={[0, 0, 0]} scale={1.5}>
       <primitive object={scene.clone()} />
     </group>
   );

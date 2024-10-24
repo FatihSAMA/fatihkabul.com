@@ -1,9 +1,104 @@
+import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const Scene = dynamic(() => import("@/components/Fish/Scene"), { ssr: false });
+
+const socials = [
+    {
+        name: "Linkedin",
+        url: "test",
+        icon: (<svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"></path>
+        </svg>)
+    },
+    {
+        name: "Linkedin",
+        url: "test",
+        icon: (<svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"></path>
+        </svg>)
+    },
+    {
+        name: "Linkedin",
+        url: "test",
+        icon: (<svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"></path>
+        </svg>)
+    },
+    {
+        name: "Linkedin",
+        url: "test",
+        icon: (<svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"></path>
+        </svg>)
+    },
+]
+
+
 export default function About(){
     return(
-        <section id="about" className=" h-screen container">
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati odio sint quisquam suscipit ipsam ipsa, debitis exercitationem amet sed porro beatae quidem minus quasi recusandae doloremque, corporis blanditiis iste tempore. Aliquam corrupti assumenda voluptate! Nemo, earum quaerat? Perferendis in minus aliquam perspiciatis sapiente quasi, commodi labore architecto animi adipisci rem assumenda aliquid pariatur, sequi odio eligendi, autem et soluta vel. Dolore tempora odio voluptates eum ipsa quasi quidem officia alias ex accusamus illum voluptate ipsam non, repellendus voluptatum expedita velit dolorum corrupti? Ratione repellat reprehenderit dolor voluptates magnam dolores a, exercitationem odio nesciunt! Minima magnam non cupiditate atque explicabo ipsa, assumenda aperiam, harum laboriosam aliquam illo accusamus obcaecati veritatis sit eveniet labore maiores maxime ipsam dignissimos optio nemo eos? Inventore, tenetur maiores magni rem beatae perspiciatis odio nulla excepturi harum doloribus asperiores ipsa in nostrum architecto dolore aperiam, vitae dignissimos reiciendis culpa laborum iure nihil quasi nobis magnam. Quam maiores consectetur amet ut corporis, dolores obcaecati voluptatum itaque nostrum et provident quia sapiente quaerat quidem error vero in! Aspernatur vel libero, nulla porro voluptate blanditiis illo earum ipsa distinctio ullam voluptatem ipsum alias, incidunt explicabo ut rerum minus officia repellendus consequatur quis magni ipsam! Voluptatum dolor doloribus quae porro numquam!
-            </p>
+        <section id="about" className="mb-24">
+            <div className="container">
+
+                <h2 className="subtitle mb-12 text-center w-full">
+                    Hakkimda
+                </h2>
+
+                <div className="flex flex-wrap gap-8 mb-8">
+
+                    <div className="flex-[5] about-box p-6 flex items-center justify-center flex-col gap-8 relative bg-zinc-900/70">
+                        <h4 className="text-center text-2xl font-bold text-neutral-300">
+                            🎈 Ben Kimim?
+                        </h4>
+                        <p className="max-w-80">
+                            Merhaba, ben Fatih Kabul. Kod yazmayı, kamp yapmayı ve oyun oynamayı severim. 
+                        </p>
+                        <Image src={"/mistik.png"} alt="Mıstık Kod Yazıyor :)" fill className="absolute left-0 opacity-60 !w-[200%] !h-[200%] object-cover -z-[2]" />
+                    </div>
+
+                    <div className="flex-[3] py-6 about-box relative">
+
+                        <h5 className="text-xl text-center font-semibold">
+                            🔗 Sosyal Medya Adreslerim
+                        </h5>
+
+                        <div className="flex ">
+                            {socials.map((social) => (
+                                <div className="flex items-center justify-center" id={social.name}>
+                                    {social.icon}
+                                </div>
+                            ))}
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="flex flex-wrap gap-8">
+
+                    <div className="flex-[3] relative about-box">
+                        <Scene />
+                    </div>
+
+                    <div className="flex-[5] about-box relative overflow-hidden flex items-center justify-center">
+                        <div className="absolute w-[200%] h-[200%] opacity-30 z-[-1]"
+                        style={{
+                            background: "radial-gradient(circle, rgba(169,88,231,1) 0%, rgba(169,88,231,0) 70%)",
+                            clipPath: "inset(0, 0, 0, 0)"
+                        }} />
+                        
+                        <h5 className="text-xl text-center mt-6 font-semibold">
+                            🔧 Kullandığım Teknolojiler
+                        </h5>
+                        
+                        <div className="flex">
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </section>
     )
 }

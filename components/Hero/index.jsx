@@ -5,16 +5,17 @@ import Magnetic from "../Buttons/Magnetic";
 
 export default function Hero(){
     return(
-        <section className="h-[calc(100vh-80px)]">
+        <section className="h-screen w-full relative">
             {/* Left Light */}
             <div
-                className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-[1200px] h-[1200px] rounded-full pointer-events-none -z-1"
+                className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-[1200px] aspect-square rounded-full pointer-events-none -z-[1]"
                 style={{
-                    background: "radial-gradient(circle, rgba(169,88,231,0.1) 0%, rgba(169,88,231,0) 70%)"
+                    background: "radial-gradient(circle, rgba(169,88,231,0.2) 0%, rgba(169,88,231,0) 70%)",
+                    clipPath: "inset(0, 0, 0, 0)"
                 }}
             />
 
-            <div className="w-full h-full flex flex-col items-start justify-center gap-12 lg:justify-evenly container lg:pl-12">
+            <div className="w-full h-full flex flex-col items-start justify-center gap-16 container lg:pl-12">
                 <h1 className="text-6xl md:text-9xl lg:text-[168px] font-azonix whitespace-pre-line leading-[1]">
                     Slogan{'\n'}Yazisi
                 </h1>

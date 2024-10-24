@@ -20,9 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`antialiased overflow-x-hidden selection:bg-transparent text-neutral-100 bg-[#09090B] ${GeistSans.className} ${GeistMono.variable} ${azonix.variable}`}
-      >        
-        {/* Blur and Black Screen */}
-        <div className="fixed inset-0 w-full h-full bg-black/40 backdrop-blur-[2px] -z-[5]" />                                    
+      >                                           
         <Header />
         {children}
       </body>
