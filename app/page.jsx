@@ -25,7 +25,7 @@ export default function Home() {
       />
       {/* Top Light */}
       <div
-          className="absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full pointer-events-none -z-[5]"
+          className="absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full pointer-events-none -z-[10]"
           style={{
               background: "radial-gradient(circle, rgba(99,215,215,0.2) 0%, rgba(99,215,215,0) 70%)"
           }}
