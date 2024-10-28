@@ -1,6 +1,7 @@
 "use client";
 
 import Magnetic from "../Buttons/Magnetic";
+import TextTyping from "../TextTyping";
 
 
 export default function Hero(){
@@ -17,7 +18,7 @@ export default function Hero(){
 
             <div className="w-full h-full flex flex-col items-start justify-center gap-16 container lg:pl-12">
                 <h1 className="text-6xl md:text-9xl lg:text-[168px] font-azonix whitespace-pre-line leading-[1]">
-                    Slogan{'\n'}Yazisi
+                    <TextTyping text={"Slogan\nYazisi"} />
                 </h1>
                 <Magnetic>
                     <button className="relative flex gap-8 justify-center items-center text-lg py-4 px-4 group z-20 lg:ml-16">
