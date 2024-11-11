@@ -19,7 +19,7 @@ export default function Hero(){
             <div className="w-full h-full flex flex-col items-start justify-center gap-16 container lg:pl-12 mt-8">
                 <h1 className="text-5xl md:text-8xl lg:text-[140px] font-azonix whitespace-pre-line leading-[1]">
                     {/* <TextTyping text={"Zamazingo\nRecai"} /> */}
-                    Zamazingo<br/>Recai
+                    Slogan<br/>Yazisi
                 </h1>
                 <Magnetic>
                     <button className="relative flex gap-8 justify-center items-center text-lg py-4 px-4 group z-20 lg:ml-16">

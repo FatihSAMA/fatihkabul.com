@@ -24,10 +24,10 @@ export default function Model() {
 
     useFrame((state, delta) => {
 
-        outside.current.rotation.x += delta * 0.1
-        outside.current.rotation.y += delta * 0.1
+        // outside.current.rotation.x += delta * 0.02
+        outside.current.rotation.y += delta * 0.05
 
-        inside.current.rotation.x -= delta * 0.16
+        inside.current.rotation.x -= delta * 0.02
 
     })
 
@@ -55,7 +55,7 @@ export default function Model() {
                 castShadow
                 receiveShadow
                 geometry={nodes.Icosphere006.geometry}
-                scale={[5, 5, 6]}
+                scale={[5.5,5,5]}
             >
                 <MeshTransmissionMaterial         
                 backside

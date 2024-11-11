@@ -34,9 +34,9 @@ export default function ShapeScene(){
             {/* <ambientLight intensity={1} /> */}
             {/* <Environment preset="city" /> */}
 
-            <directionalLight color={"#7b59ca"} intensity={10} position={[-15, 10, 0]} />
-            <directionalLight color={"red"} intensity={2} position={[15, -10, 0]} />
-            <directionalLight color={"#7b59ca"} intensity={5} position={[0, -10, 0]} />
+            <directionalLight color={"#a352ff"} intensity={5} position={[-15, 10, 0]} />
+            <directionalLight color={"#7b59ca"} intensity={5} position={[15, -10, 0]} />
+            <directionalLight color={"#fd8cf8"} intensity={1} position={[0, -10, 0]} />
 
 
             <Suspense fallback={<Loader />}>
