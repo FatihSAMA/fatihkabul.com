@@ -4,19 +4,20 @@ const services = [
     {
         icon: "/services/ui.png",
         title: "Arayüz Tasarımı (UI/UX)",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet pariatur cumque rem." 
+        description: "Estetik ve kullanıcı odaklı arayüzlerle etkileyici deneyimler sunuyorum."
     },
     {
         icon: "/services/webdesign.png",
         title: "Website Tasarımı",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet pariatur cumque rem." 
+        description: "Her cihazda kusursuz görünen, kullanıcı dostu web siteleri tasarlıyorum."
     },
     {
         icon: "/services/development.png",
         title: "Yazılım Geliştirme",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet pariatur cumque rem." 
+        description: "İhtiyaca özel, işlevsel web ve mobil uygulamalar geliştiriyorum."
     },
-]
+];
+
 
 export default function Services(){
     return(

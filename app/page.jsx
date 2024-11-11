@@ -3,19 +3,21 @@ import Brands from "@/components/Brands";
 import Services from "@/components/Services";
 import Navbar from "@/components/Header/Navbar";
 import Portfolio from "@/components/Portfolio";
-import Reviews from "@/components/Reviews";
+// import Reviews from "@/components/Reviews";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
+import Shape from "@/components/Shape";
 
 export default function Home() {
   return (
     <main className="!max-w-screen overflow-hidden relative">
 
+      <Shape />
 
       <Navbar />
 
       {/* Blur and Black Screen */}
-      <div className="fixed inset-0 w-full h-full bg-black/40 backdrop-blur-[2px] -z-[5] pointer-events-none" /> 
+      <div className="fixed inset-0 w-full h-full bg-black/40 backdrop-blur-[4px] -z-[5] pointer-events-none" /> 
       {/* Grain */}
       <div
       className="fixed inset-0 w-[300%] h-[300vh] opacity-[.01] -z-10 pointer-events-none"
@@ -25,7 +27,7 @@ export default function Home() {
       />
       {/* Top Light */}
       <div
-          className="absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full pointer-events-none -z-[10]"
+          className="fixed -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full pointer-events-none -z-[1]"
           style={{
               background: "radial-gradient(circle, rgba(99,215,215,0.2) 0%, rgba(99,215,215,0) 70%)"
           }}
@@ -35,7 +37,7 @@ export default function Home() {
       <Brands />
       <Services />
       <Portfolio />
-      <Reviews />
+      {/* <Reviews /> */}
       <About />
       <Footer />
 

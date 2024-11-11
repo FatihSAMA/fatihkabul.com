@@ -7,7 +7,7 @@ export default function Reviews(){
                 <h2 className="subtitle mb-12">
                     Degerlendirmeler
                 </h2>
-                <Review name={"Fatih Zamazingo"} title={"CEO at Rafazu"} review={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, magni aut. Perspiciatis repellendus expedita, quaerat tempore eius sequi eos corrupti omnis sint quae."}  />
+                <Review name={"Fatih"} title={"CEO at Google"} review={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, magni aut. Perspiciatis repellendus expedita, quaerat tempore eius sequi eos corrupti omnis sint quae."}  />
             </div>
         </section>
     )
