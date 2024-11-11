@@ -63,7 +63,7 @@ const socials = [
 
 export default function SocialAccounts(){
     return(
-        <div className="flex-[3] py-6 about-box flex items-center justify-center flex-col lg:bg-zinc-950/10">
+        <div className="flex-[3] py-6 about-box flex items-center justify-center flex-col lg:bg-zinc-950/85">
 
             <h5 className="text-xl text-center font-semibold flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 256 256">

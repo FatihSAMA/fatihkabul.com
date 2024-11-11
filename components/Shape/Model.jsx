@@ -28,7 +28,6 @@ export default function Model() {
         outside.current.rotation.y += delta * 0.1
 
         inside.current.rotation.x -= delta * 0.16
-        inside.current.rotation.y -= delta * 0.1
 
     })
 

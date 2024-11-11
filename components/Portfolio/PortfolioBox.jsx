@@ -20,9 +20,9 @@ export default function PortfolioBox({ name, image, link }){
                 
                 <div 
                 className="flex flex-col items-center justify-center text-lg font-semibold gap-2.5 absolute inset-0 text-slate-200 w-full h-full translate-y-full group-hover:translate-y-0 transition-all duration-300 group-hover:delay-100">   
-                    <h5 className="text-xl">
+                    <h6 className="text-xl">
                         {name}
-                    </h5>
+                    </h6>
                     <div className="flex items-center justify-center gap-2.5">
                         Göz At
                         <svg className="rotate-[45deg] group-hover:rotate-90 duration-300 delay-700 transition-all" xmlns="http://www.w3.org/2000/svg" width={36} height={36} viewBox="0 0 256 256">
