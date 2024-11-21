@@ -45,9 +45,6 @@ export default function Model({ path, speed }) {
       }catch{
         
       }
-
-      
-      
     }
   });
 

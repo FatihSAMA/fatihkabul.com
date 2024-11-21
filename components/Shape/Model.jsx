@@ -2,22 +2,37 @@
 
 import { MeshTransmissionMaterial, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
-import { useRef } from 'react';
+import { useRef, memo, useMemo } from 'react';
 import * as THREE from 'three'
 
-export default function Model() {
+function Model() {
     const { nodes } = useGLTF('/shape.glb')
 
-    // Material props for sphere
-    const { clearcoat, clearcoatRoughness, ior, coatTint, sheen, sheenRoughness, sheenTint } = {
-        clearcoat: { value: 0.394, min: 0, max: 1 },
-        clearcoatRoughness: { value: 0.495, min: 0, max: 1 },
-        ior: { value: 1.5, min: 1, max: 2.5 },
+    const materialProps = useMemo(() => ({
+        clearcoat: 0.394,
+        clearcoatRoughness: 0.495,
+        ior: 1.5,
         coatTint: "#4faaff",
-        sheen: { value: 0.268, min: 0, max: 1 },
-        sheenRoughness: { value: 0.5, min: 0, max: 1 },
+        sheen: 0.268,
+        sheenRoughness: 0.5,
         sheenTint: "#ff4444",
-    }
+    }), []);
+
+    const materialProps2 = useMemo(() => ({
+        clearcoat: 0, // Parlaklık, cam için
+        clearcoatRoughness: 0, // Pürüzsüz yüzey
+        ior: 0, // Camın kırılma indeksi
+        // coatTint: "#ffffff", // Cam için beyaz renk tonu
+        sheen: 0, // Düşük sheen, camda daha az parlama
+        sheenRoughness: 0, // Şeffaflık
+        sheenTint: "#ffffff", // Şeffaflık için renk tonu
+        transmission: 1, // Şeffaflık (cam efekti için)
+        roughness: 0.2, // Metalik yüzey için düşük roughness
+        metalness: 1, // Metalik etkisi
+        opacity: 0.85, // Yarı şeffaflık
+        envMapIntensity: 1.0, // Çevre haritası yansıması
+    }), []);
+    
 
     const outside = useRef(null)
     const inside = useRef(null)
@@ -25,9 +40,9 @@ export default function Model() {
     useFrame((state, delta) => {
 
         // outside.current.rotation.x += delta * 0.02
-        outside.current.rotation.y += delta * 0.05
+        outside.current.rotation.y += delta * 0.01
 
-        inside.current.rotation.x -= delta * 0.02
+        inside.current.rotation.x += delta * 0.03
 
     })
 
@@ -38,16 +53,12 @@ export default function Model() {
                 castShadow
                 receiveShadow
                 geometry={nodes.Icosphere.geometry}
-                scale={5}
+                scale={4}
             >
                 <meshPhysicalMaterial
-                    clearcoat={clearcoat}
-                    clearcoatRoughness={clearcoatRoughness}
-                    ior={ior}
-                    attenuationTint={new THREE.Color(coatTint)}
-                    sheen={sheen}
-                    sheenRoughness={sheenRoughness}
-                    sheenColor={new THREE.Color(sheenTint)}
+                    {...materialProps}
+                    attenuationTint={new THREE.Color(materialProps.coatTint)}
+                    sheenColor={new THREE.Color(materialProps.sheenTint)}
                 />
             </mesh>
             <mesh
@@ -55,9 +66,9 @@ export default function Model() {
                 castShadow
                 receiveShadow
                 geometry={nodes.Icosphere006.geometry}
-                scale={[5.5,5,5]}
+                scale={[4.5,4.5,4.5]}
             >
-                <MeshTransmissionMaterial         
+                {/* <MeshTransmissionMaterial         
                 backside
                 samples={4}
                 thickness={3}
@@ -69,6 +80,11 @@ export default function Model() {
                 iridescence={1}
                 iridescenceIOR={1}
                 iridescenceThicknessRange={[0, 1400]}
+                /> */}
+                <meshPhysicalMaterial
+                    {...materialProps2}
+                    attenuationTint={new THREE.Color(materialProps.coatTint)} 
+                    sheenColor={new THREE.Color(materialProps.sheenTint)} // Renk tonu beyaz
                 />
             </mesh>
         </group>
@@ -76,3 +92,5 @@ export default function Model() {
 }
 
 useGLTF.preload('/shape.glb')
+
+export default memo(Model)

@@ -2,7 +2,7 @@ import AboutMe from "./AboutMe"
 import TechStack from "./TechStack"
 import SocialAccounts from "./SocialAccounts"
 import Contact from "./Contact"
-import TextTyping from "../TextTyping"
+// import TextTyping from "../TextTyping"
 
 
 export default function About(){
@@ -15,7 +15,8 @@ export default function About(){
                 }} />
 
                 <h2 className="subtitle mb-12 text-center w-full">
-                    <TextTyping text={"Hakkimda"} />
+                    {/* <TextTyping text={"Hakkimda"} /> */}
+                    HAKKIMDA
                 </h2>
 
                 <div className="flex flex-wrap gap-4 mb-4">

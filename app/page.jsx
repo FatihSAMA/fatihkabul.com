@@ -14,13 +14,13 @@ export default function Home() {
 
       <Shape />
 
-      <Navbar />
+      {/* <Navbar /> */}
 
-      {/* Blur and Black Screen */}
-      <div className="fixed inset-0 w-full h-full bg-black/40 backdrop-blur-[4px] -z-[5] pointer-events-none" /> 
+      {/* Black Screen */}
+      <div className="fixed inset-0 w-full h-full bg-black/40 -z-[5] pointer-events-none" /> 
       {/* Grain */}
       <div
-      className="fixed inset-0 w-[300%] h-[300vh] opacity-[.01] -z-10 pointer-events-none"
+      className="fixed inset-0 w-[300%] h-[300vh] opacity-[.01] -z-[2] pointer-events-none"
       style={{
         backgroundImage: "url('/noise.png')"
       }}

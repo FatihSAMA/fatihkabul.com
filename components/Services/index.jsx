@@ -3,7 +3,7 @@ import ServiceBox from "./ServiceBox"
 const services = [
     {
         icon: "/services/ui.png",
-        title: "Arayüz Tasarımı (UI/UX)",
+        title: "Arayüz Tasarımı",
         description: "Estetik ve kullanıcı odaklı arayüzlerle etkileyici deneyimler sunuyorum."
     },
     {

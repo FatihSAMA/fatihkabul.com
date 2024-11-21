@@ -238,9 +238,9 @@ export default function TechStack(){
     return(
         <div className="flex-[5] about-box overflow-hidden flex items-center justify-center flex-col cursor-default">
                         
-            <h5 className="text-xl text-center font-semibold">
+            <h4 className="text-xl text-center font-semibold">
                 🔧 Kullandığım Teknolojiler
-            </h5>
+            </h4>
             
             <Marquee className="flex gap-4 mt-12" autoFill={true}>
                 {techstack.map(tech => (
