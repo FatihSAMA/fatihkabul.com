@@ -37,7 +37,7 @@ export default function Services(){
 
             {/* Right Light */}
             <div
-                className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 w-[800px] aspect-square rounded-full pointer-events-none -z-[1]"
+                className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 w-[1000px] aspect-square rounded-full pointer-events-none -z-[1]"
                 style={{
                     background: "radial-gradient(circle, rgba(169,88,231,0.2) 0%, rgba(169,88,231,0) 70%)"
                 }}

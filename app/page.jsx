@@ -14,13 +14,13 @@ export default function Home() {
 
       <Shape />
 
-      {/* <Navbar /> */}
+      <Navbar />
 
       {/* Black Screen */}
       <div className="fixed inset-0 w-full h-full bg-black/40 -z-[5] pointer-events-none" /> 
       {/* Grain */}
       <div
-      className="fixed inset-0 w-[300%] h-[300vh] opacity-[.01] -z-[2] pointer-events-none"
+      className="fixed inset-0 w-[300%] h-[300vh] opacity-[.04] -z-[2] pointer-events-none"
       style={{
         backgroundImage: "url('/noise.png')"
       }}
@@ -42,9 +42,9 @@ export default function Home() {
       <Footer />
 
       {/* Black gradient in bottom */}
-      {/* <div className="w-full fixed h-20 bottom-0 bg-gradient-to-t from-black to-black/0" /> */}
+      <div className="w-full fixed h-20 bottom-0 bg-gradient-to-t from-black to-black/0" />
 
-      {/* Top Light */}
+      {/* Bottom Light */}
       <div
         className="absolute translate-y-1/2 bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full pointer-events-none -z-[5]"
         style={{

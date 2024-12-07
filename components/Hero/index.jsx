@@ -9,9 +9,9 @@ export default function Hero(){
         <section id="hero" className="h-screen w-full relative">
             {/* Left Light */}
             <div
-                className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-[1200px] aspect-square rounded-full pointer-events-none -z-[1]"
+                className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[1200px] aspect-square rounded-full pointer-events-none -z-[1]"
                 style={{
-                    background: "radial-gradient(circle, rgba(169,88,231,0.2) 0%, rgba(169,88,231,0) 70%)",
+                    background: "radial-gradient(circle, rgba(169,88,231, 0.1) 0%, rgba(169,88,231,0) 70%)",
                     clipPath: "inset(0, 0, 0, 0)"
                 }}
             />

@@ -19,12 +19,12 @@ function Model() {
     }), []);
 
     const materialProps2 = useMemo(() => ({
-        clearcoat: 0, // Parlaklık, cam için
-        clearcoatRoughness: 0, // Pürüzsüz yüzey
-        ior: 0, // Camın kırılma indeksi
-        // coatTint: "#ffffff", // Cam için beyaz renk tonu
-        sheen: 0, // Düşük sheen, camda daha az parlama
-        sheenRoughness: 0, // Şeffaflık
+        clearcoat: 0.1, // Parlaklık, cam için
+        clearcoatRoughness: 0.1, // Pürüzsüz yüzey
+        ior: 0.2, // Camın kırılma indeksi
+        coatTint: "#ffffff", // Cam için beyaz renk tonu
+        sheen: 0.2, // Düşük sheen, camda daha az parlama
+        sheenRoughness: 0.3, // Şeffaflık
         sheenTint: "#ffffff", // Şeffaflık için renk tonu
         transmission: 1, // Şeffaflık (cam efekti için)
         roughness: 0.2, // Metalik yüzey için düşük roughness
@@ -68,24 +68,23 @@ function Model() {
                 geometry={nodes.Icosphere006.geometry}
                 scale={[4.5,4.5,4.5]}
             >
-                {/* <MeshTransmissionMaterial         
-                backside
-                samples={4}
-                thickness={3}
-                chromaticAberration={0.005}
-                anisotropy={0.1}
-                distortion={0.1}
-                distortionScale={0.1}
-                temporalDistortion={0.2}
-                iridescence={1}
-                iridescenceIOR={1}
-                iridescenceThicknessRange={[0, 1400]}
-                /> */}
-                <meshPhysicalMaterial
+                <MeshTransmissionMaterial         
+backside
+backsideThickness={1}
+samples={16}
+thickness={0.2}
+anisotropicBlur={0.1}
+iridescence={1}
+iridescenceIOR={1}
+iridescenceThicknessRange={[0, 1400]}
+clearcoat={1}
+envMapIntensity={0.5}
+                />
+                {/* <meshPhysicalMaterial
                     {...materialProps2}
                     attenuationTint={new THREE.Color(materialProps.coatTint)} 
                     sheenColor={new THREE.Color(materialProps.sheenTint)} // Renk tonu beyaz
-                />
+                /> */}
             </mesh>
         </group>
     )
